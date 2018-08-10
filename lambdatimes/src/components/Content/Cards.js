@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
 import Card from './Card';
 
-
-
-
-// cards={this.filterCards()}
-
 const Cards = props => {
   return (
     <div className="cards-container">
       {/* Using the cards prop, map over the list creating a 
           new Card component for each passing the card as the only prop*/}
-      
-    {props.cards.map((each, i) => {
-      <Card key={i} cardItems={each.cards}/>
-    })}
+          {props.cards.map((card, indx) => <Card key={indx} card={card} />)}
+
     </div>
   )
 }
