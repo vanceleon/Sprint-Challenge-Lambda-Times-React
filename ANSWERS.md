@@ -11,7 +11,7 @@
 
     growth birthing, updating, death 
 
-    componentDidMount,  
+    componentDidMount, componentDidUpdate, render
 
 3.  What is a Higher Order Component?
     It is a component that has other components passed through that need or can use similar functionality. It is ultimately a way to reuse code that performs similar functionality.

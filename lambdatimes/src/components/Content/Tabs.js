@@ -1,5 +1,8 @@
 import React from "react";
+import PropTypes from 'prop-types'
 import Tab from "./Tab";
+
+
 const Tabs = props => {
   return (
     <div className="tabs">
@@ -14,9 +17,10 @@ const Tabs = props => {
           selectTabHandler={this.changeSelected}
         /> */}
 
+            {console.log("testing")}
         {props.tabs.map(tab => (
           <Tab
-            key={tab}
+            key={tab.headline}
             tab={tab}
             selectedTab={props.selectedTab}
             selectTabHandler={props.selectTabHandler}
@@ -26,6 +30,13 @@ const Tabs = props => {
     </div>
   );
 };
+
+Tab.propTypes = {
+  tabs: PropTypes.arrayOf({
+    tab:PropTypes.string
+  })
+}
+
 
 // Make sure to use PropTypes to validate your types!
 export default Tabs;
